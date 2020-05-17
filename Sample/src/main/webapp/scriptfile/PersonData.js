@@ -47,7 +47,7 @@ function pdata() {
 	jAjx["lab"] = labvalues;
 alert(JSON.stringify(jAjx));
 	$.ajax({
-		url : 'http://localhost:8088/Sample/personDetails',
+		url : 'http://mavensampleapp.herokuapp.com/personDetails',
 		type : 'POST',
 		contentType : 'application/json',
 		data : JSON.stringify(jAjx),
@@ -68,7 +68,7 @@ alert(JSON.stringify(jAjx));
 function viewList() {
 
 	$.ajax({
-				url : 'http://localhost:8088/Sample/tablevalues',
+				url : 'http://mavensampleapp.herokuapp.com/tablevalues',
 				type : 'GET',
 				contentType : "application/json; charset=utf-8",
 				dataType : "json",
@@ -185,7 +185,7 @@ function deletedata(dlt) {
 		var drow = {"name" : nm, "gender" : gen, "age" : age, "lab" : newlab, "id" : id};
 
 		$.ajax({
-			url : 'http://localhost:8088/Sample/deleteperson',
+			url : 'http://mavensampleapp.herokuapp.com/deleteperson',
 			type : 'DELETE',
 			contentType : 'application/json',
 			data : JSON.stringify(drow),
@@ -244,7 +244,7 @@ function savebtn(sd) {
 	var svdata = {"gender" : editedgen, "name" : editedname, "lab" : editedlab, "age" : editedage, "id" : id};
 	alert(JSON.stringify(svdata));
 	$.ajax({
-		url : 'http://localhost:8088/Sample/editperson',
+		url : 'http://mavensampleapp.herokuapp.com/editperson',
 		type : 'PUT',
 		contentType : 'application/json',
 		data : JSON.stringify(svdata),
